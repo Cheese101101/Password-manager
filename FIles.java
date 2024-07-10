@@ -49,10 +49,13 @@ public class FIles{
     public static void writeFile() {
         try (BufferedWriter writer = new BufferedWriter(new FileWriter("storage"))) {
             writer.write(fileText.toString());
-            writer.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static void addToFile(String info){
+        fileText.append(info).append("\n");
     }
 
     public static void main(String[] args){
