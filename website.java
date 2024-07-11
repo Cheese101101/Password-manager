@@ -21,7 +21,7 @@ public class website {
         FIles.addToFile(newName);
         FIles.addToFile("password: default");
         FIles.addToFile("username: default");
-        FIles.deleteFile();
+        FIles.indent();
         FIles.writeFile();
     }
 
@@ -29,12 +29,13 @@ public class website {
         password = newPassword;
         FIles.readFile();
         FIles.rewriteFile(name, "password: ", newPassword);
-        FIles.deleteFile();
         FIles.writeFile();
     }
 
-    public static void main(String[] args){
-        name = "riyaraval";
-        setPassword("hihihi");
+    public static void setUsername(String newUsername){
+        username = newUsername;
+        FIles.readFile();
+        FIles.rewriteFile(name, "username: ", newUsername);
+        FIles.writeFile();
     }
 }

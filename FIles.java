@@ -52,15 +52,21 @@ public class FIles{
         } catch (Exception e) {
             e.printStackTrace();
         }
+        fileText.setLength(0);
     }
 
     public static void addToFile(String info){
         fileText.append(info).append("\n");
     }
 
+    public static void indent(){
+        fileText.append("-").append("\n");
+    }
+
     public static void main(String[] args){
         readFile();
         rewriteFile("pp", "password: ","awesome8");
+        addToFile("hi");
         deleteFile();
         writeFile();
     }
