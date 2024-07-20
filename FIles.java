@@ -3,10 +3,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.util.Map;
 
 
 public class FIles{
     static StringBuffer fileText = new StringBuffer();
+    static Map<String, website> storage;
 
     public static void deleteFile(){
         File file = new File("storage");
@@ -21,6 +23,35 @@ public class FIles{
         } catch(Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static Map<String,website> setStorage(){
+        String webName = "";
+        String password = "";
+        String username = "";
+        String str = "";
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                if(str.startsWith("website")){
+                    webName = str.substring(9).trim();
+                }
+                if(str.startsWith("password")){
+                    password = str.substring(10).trim();
+                }
+                if(str.startsWith("username")){
+                    username = str.substring(10).trim();
+                    website newWeb = new website(webName, password, username);
+                    storage.put(webName, newWeb);
+                }
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return storage;
+    }
+
+    public static void clear(){
+        storage.clear();
     }
 
     public static void rewriteFile(String webName, String type, String name){
@@ -44,6 +75,7 @@ public class FIles{
         int startIndex = fileText.indexOf(oldName);
         int endIndex = startIndex + oldName.length();
         fileText.replace(startIndex, endIndex, name);
+
     }
 
     public static void writeFile() {
@@ -70,5 +102,4 @@ public class FIles{
         deleteFile();
         writeFile();
     }
-
 }

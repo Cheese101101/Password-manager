@@ -15,10 +15,21 @@ public class website {
         return username;
     }
 
+    public website(){
+
+    }
+    public website(String newName){
+        name = newName;
+    }
+    public website(String newName, String newPassword, String newUsername){
+        name = newName;
+        password = newPassword;
+        username = newUsername;
+    }
     public static void setName(String newName){
         name = newName;
         FIles.readFile();
-        FIles.addToFile(newName);
+        FIles.addToFile("website: "+newName);
         FIles.addToFile("password: default");
         FIles.addToFile("username: default");
         FIles.indent();
