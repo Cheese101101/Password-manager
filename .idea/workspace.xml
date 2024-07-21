@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aff191d-f877-49c5-9d23-72b8ec87e737" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FIles.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Password-manager/storage" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/storage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Password-manager/website.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/website.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage" beforeDir="false" afterPath="$PROJECT_DIR$/storage" afterDir="false" />
@@ -24,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="module-info" />
       </list>
     </option>
   </component>
