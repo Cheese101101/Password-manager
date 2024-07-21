@@ -1,7 +1,7 @@
 public class website {
-    public static String name;
-    public static String password;
-    public static String username;
+    public String name;
+    public String password;
+    public String username;
 
     public String getName(){
         return name;
@@ -26,7 +26,7 @@ public class website {
         password = newPassword;
         username = newUsername;
     }
-    public static void setName(String newName){
+    public void setName(String newName){
         name = newName;
         FIles.readFile();
         FIles.addToFile("website: "+newName);
@@ -36,14 +36,14 @@ public class website {
         FIles.writeFile();
     }
 
-    public static void setPassword(String newPassword){
+    public void setPassword(String newPassword){
         password = newPassword;
         FIles.readFile();
         FIles.rewriteFile(name, "password: ", newPassword);
         FIles.writeFile();
     }
 
-    public static void setUsername(String newUsername){
+    public void setUsername(String newUsername){
         username = newUsername;
         FIles.readFile();
         FIles.rewriteFile(name, "username: ", newUsername);

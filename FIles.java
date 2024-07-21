@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.BufferedWriter;
-import java.io.File;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -10,12 +10,9 @@ public class FIles{
     static StringBuffer fileText = new StringBuffer();
     static Map<String, website> storage;
 
-    public static void deleteFile(){
-        File file = new File("storage");
-        file.delete();
-    }
+
     public static void readFile(){
-        String str = "";
+        String str;
         try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
             while((str = fileReader.readLine()) != null){
                 fileText.append(str).append("\n");
@@ -27,21 +24,23 @@ public class FIles{
 
     public static Map<String,website> setStorage(){
         String webName = "";
+        String username;
         String password = "";
-        String username = "";
-        String str = "";
+        website web;
+        String str;
+        storage = new HashMap<>();
         try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
             while((str = fileReader.readLine()) != null){
-                if(str.startsWith("website")){
+                if(str.startsWith("website: ")){
                     webName = str.substring(9).trim();
                 }
-                if(str.startsWith("password")){
+                if(str.startsWith("password: ")){
                     password = str.substring(10).trim();
                 }
-                if(str.startsWith("username")){
+                if(str.startsWith("username: ")){
                     username = str.substring(10).trim();
-                    website newWeb = new website(webName, password, username);
-                    storage.put(webName, newWeb);
+                    web = new website(webName,password,username);
+                    storage.put(webName, web);
                 }
             }
         } catch(Exception e){
@@ -50,17 +49,13 @@ public class FIles{
         return storage;
     }
 
-    public static void clear(){
-        storage.clear();
-    }
-
     public static void rewriteFile(String webName, String type, String name){
         String oldName = "";
-        String str = "";
+        String str;
         boolean found = false;
         try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
             while((str = fileReader.readLine()) != null){
-                if(str.startsWith(webName)){
+                if(str.contains(webName)){
                     found = true;
                 }
                 if(str.startsWith(type) && (found)){
@@ -95,11 +90,51 @@ public class FIles{
         fileText.append("-").append("\n");
     }
 
+    public static void setPin(String pin){
+        String str;
+        String oldPin = "";
+        boolean found = false;
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                if(str.startsWith("pin: ")){
+                    found = true;
+                    oldPin = str.substring(5).trim();
+                }
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+
+        if(!found){
+            StringBuffer tempFileText = new StringBuffer();
+            tempFileText.append("pin: ").append(pin).append("\n").append("-").append("\n");
+            fileText = tempFileText.append(fileText);
+        }
+        if(found){
+            int startIndex = fileText.indexOf(oldPin);
+            int endIndex = startIndex + oldPin.length();
+            fileText.replace(startIndex, endIndex, pin);
+        }
+    }
+
+    public static String getPin(){
+        String str;
+        String pin = null;
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                if(str.startsWith("pin: ")){
+                    pin = str.substring(5).trim();
+                }
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return pin;
+    }
     public static void main(String[] args){
         readFile();
         rewriteFile("pp", "password: ","awesome8");
         addToFile("hi");
-        deleteFile();
         writeFile();
     }
 }
