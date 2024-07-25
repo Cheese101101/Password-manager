@@ -4,6 +4,9 @@ public class frontInterface {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         website web;
+        FIles.readFile();
+        FIles.decrypt();
+        FIles.writeFile();
         String pin = FIles.getPin();
         boolean secure = false;
         if(pin == null){
@@ -124,6 +127,11 @@ public class frontInterface {
                 }
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+            finally {
+                FIles.readFile();
+                FIles.encrypt();
+                FIles.writeFile();
             }
         }
         else{

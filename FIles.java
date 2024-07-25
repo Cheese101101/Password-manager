@@ -22,6 +22,32 @@ public class FIles{
         }
     }
 
+    public static void encrypt(){
+        String str;
+        fileText.setLength(0);
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                String tempText = encryptor.encrypt(str);
+                fileText.append(tempText).append("\n");
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void decrypt(){
+        String str;
+        fileText.setLength(0);
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                String tempText = encryptor.decrypt(str);
+                fileText.append(tempText).append("\n");
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public static Map<String,website> setStorage(){
         String webName = "";
         String username;
