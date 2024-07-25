@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class frontInterface {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
+        scanner.useDelimiter("\\n");
         website web;
         FIles.readFile();
         FIles.decrypt();
@@ -91,31 +92,17 @@ public class frontInterface {
                 if (option == 4) {
                     System.out.println("Please enter the website name: ");
                     String webName = scanner.next();
-                    System.out.println("Choose from the following menu: \n 1. Get password \n 2. Get username \n 3. Get both");
-                    option = scanner.nextInt();
-                    if (option == 1) {
-                        Map<String, website> storage = FIles.setStorage();
-                        web = storage.get(webName);
-                        String password = web.getpassword();
-                        System.out.println("Password: " + password);
-                        return;
-                    }
-                    if (option == 2) {
-                        Map<String, website> storage = FIles.setStorage();
-                        web = storage.get(webName);
-                        String username = web.getUsername();
-                        System.out.println("Username: " + username);
-                        return;
-                    }
-                    if (option == 3) {
-                        Map<String, website> storage = FIles.setStorage();
-                        web = storage.get(webName);
-                        String password = web.getpassword();
-                        String username = web.getUsername();
-                        System.out.println("Password: " + password);
-                        System.out.println("Username: " + username);
-                        return;
-                    }
+                    String searchList = FIles.search(webName);
+                    System.out.println("Choose from the following: \n" + searchList);
+                    webName = scanner.next();
+
+                    Map<String, website> storage = FIles.setStorage();
+                    web = storage.get(webName);
+                    String password = web.getpassword();
+                    String username = web.getUsername();
+                    System.out.println("Password: " + password);
+                    System.out.println("Username: " + username);
+                    return;
 
                 }
                 if (option == 5) {

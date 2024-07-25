@@ -22,6 +22,23 @@ public class FIles{
         }
     }
 
+    public static String search(String text){
+        String str;
+        StringBuilder searchList = new StringBuilder();
+        try(BufferedReader fileReader = new BufferedReader(new FileReader("storage"))){
+            while((str = fileReader.readLine()) != null){
+                if(str.startsWith("website: ")){
+                    if(str.contains(text)){
+                        String webName = str.substring(9).trim();
+                        searchList.append(webName).append(",");
+                    }
+                }
+            }
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return searchList.toString();
+    }
     public static void encrypt(){
         String str;
         fileText.setLength(0);
