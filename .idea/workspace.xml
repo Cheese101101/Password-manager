@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aff191d-f877-49c5-9d23-72b8ec87e737" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/encryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FIles.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage" beforeDir="false" afterPath="$PROJECT_DIR$/storage" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website.java" beforeDir="false" afterPath="$PROJECT_DIR$/website.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +48,27 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.frontInterface">
+    <configuration name="frontInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="frontInterface" />
+      <module name="Password-manager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="passwordGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="passwordGenerator" />
+      <module name="Password-manager" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.frontInterface" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
