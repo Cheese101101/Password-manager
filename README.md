@@ -16,7 +16,17 @@ You may also set the attributes using the given methods.
 This class is what handles the interface that the user will be using.
 It uses a basic menu accessed through a pin to give the user options of what they want to do.
 Each option may have a follow up menu which the user can further choose from and then the option will be executed using the previous two classes.
-Note that once the terminal will only ask for the pin once, and once the user has gained access to the menu they will not need to re-enter the pin until the program is rerun.
-The terminal will not ask for a pin however is there is no pin set previously.
+
+When you request for a websites password and username you are not required to type the full name of the website, you can search a keyword/letter/sequence of words from the title which will result in a list of all websites recorded containing the input.
+From there you can re-enter the website you want and you will get your information.
+Note however that the website name must contain the search input correctly otherwise it will not appear as a result, therefore it is best to keep the search input vague if you are unsure.
+
+Also note that the terminal will only ask for the pin once, and once the user has gained access to the menu they will not need to re-enter the pin until the program is rerun.
+The terminal will not ask for a pin however, if there is no pin set previously.
 # Storage
 This is the text file which will store all the data including the websites information and your pin.
+# Encryptor
+This module is made to encrypt and decrypt and text given. 
+I have used this to encrypt the storage text file so that you may not access the files contents outside of the program itself.
+The text file is decrypted at the beginning of the program and re-encrypted at the end.
+The cipher I have used in this code is quite simple, it will shift every character apart from spaces by +5 char value, this method can be made more rigourous to ensure higher level of safty however for the purpose of my program I have chosen to leave it at a low security level.
