@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5aff191d-f877-49c5-9d23-72b8ec87e737" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/encryptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FIles.java" beforeDir="false" afterPath="$PROJECT_DIR$/FIles.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/frontInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/FIles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/storage" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/storage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Password-manager/website.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Password-manager/website.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/storage" beforeDir="false" afterPath="$PROJECT_DIR$/storage" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website.java" beforeDir="false" afterPath="$PROJECT_DIR$/website.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,17 +35,20 @@
     <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2j4HghyxRYg8aVX8olRplcJVQg2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,6 +72,7 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/workspace_xml$encryptor__2_.ic" NAME="encryptor (2) Coverage Results" MODIFIED="1721918612748" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/workspace_xml$frontInterface.ic" NAME="frontInterface Coverage Results" MODIFIED="1721514032565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
